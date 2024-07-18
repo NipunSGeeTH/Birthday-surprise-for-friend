@@ -68,7 +68,17 @@
                 
                 <div id="input-container">
                     <div class="mes" id="message22">Can you enter your friend's name please</div>
-                    <input type="text" id="txtSearch" placeholder="Type Here " spellcheck="false"/>
+                    <input type="text" id="txtSearch" placeholder="Type Here" spellcheck="false" oninput="capitalizeFirstLetter()" />
+
+<script>
+function capitalizeFirstLetter() {
+    const input = document.getElementById('txtSearch');
+    let value = input.value;
+    if (value.length > 0) {
+        input.value = value.charAt(0).toUpperCase() + value.slice(1);
+    }
+}
+</script>
                     <input type="button" id="btnSearch" Value="enter" onclick="doSomething();" />
                     <div class="error" id="nameError"></div> 
                   </div>
