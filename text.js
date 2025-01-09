@@ -14,7 +14,7 @@ const entertext1 = document.getElementById('message22');
 
 
 message1.textContent = "Power On";
-message2.textContent = "Hi' Sangeeth ";
+message2.textContent = "Hi' Nipun";
 message3.textContent = "I'm Your New Phone";
 message4.textContent = "I have to Say You Somthing";
 
@@ -22,7 +22,7 @@ entertext1.textContent = "Enter your friend's name please";
 
 
 
-let SecondScreenText1 = [ "Okay Sangeeth"];
+let SecondScreenText1 = [ "Okay Nipun"];
 let SecondScreenText2 = ["Do you know"];
 let SecondScreenText3 = ["is a Good Friend "];
 let SecondScreenText4 = ["So, I'm sure"];
