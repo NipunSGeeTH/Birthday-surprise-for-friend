@@ -16,7 +16,8 @@ const entertext1 = document.getElementById('message22');
 message1.textContent = "Power On";
 message2.textContent = "Hi' Sangeeth";
 message3.textContent = "I'm Your New Phone";
-message4.textContent = "I have to Say You Somthing";
+message4.textContent = "Please Turn up Volume bit.";
+message5.textContent="I have to Say You Somthing"
 
 entertext1.textContent = "Enter your friend's name please";
 
