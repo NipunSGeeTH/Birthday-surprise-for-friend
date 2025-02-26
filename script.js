@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { id: "message3"},
         { id: "message4" },
         { id: "message5" },
+        { id: "message6" },
         
     ];
 
@@ -38,30 +39,48 @@ document.addEventListener("DOMContentLoaded", function() {
             const messageElement = document.getElementById(messages[currentIndex].id);
             messageElement.style.display = "block";
             messageElement.classList.add("fade-in");
-
+            let displayTime= 2000;
+            // Check if the current message is message4
+            if (messages[currentIndex].id === "message4") {
+                const imgElement = document.createElement("img");
+                imgElement.src = "src/img/turn-up-volume.gif"; // Change this to your image path
+                imgElement.alt = "Turn up volume";
+                imgElement.id = "volumeImage"; // ID for styling/removal
+                displayTime=5000;
+    
+                // Append the image to message4
+                messageElement.appendChild(imgElement);
+            }
+    
             setTimeout(() => {
                 messageElement.classList.remove("fade-in");
                 messageElement.classList.add("fade-out");
-
+    
                 setTimeout(() => {
+                    // Remove the image when hiding message4
+                    if (messages[currentIndex].id === "message4") {
+                        const imgToRemove = document.getElementById("volumeImage");
+                        if (imgToRemove) imgToRemove.remove();
+                    }
+    
                     messageElement.style.display = "none";
                     messageElement.classList.remove("fade-out");
                     currentIndex++;
                     showNextMessage();
                 }, 2000); // Time for fading out
-            }, 2000); // Time for displaying the message
+            }, displayTime); // Time for displaying the message
         } else if (currentIndex === messages.length - 1) {
             const messageElement = document.getElementById(messages[currentIndex].id);
             messageElement.style.display = "block";
             messageElement.classList.add("fade-in");
-
+    
             setTimeout(() => {
                 messageElement.classList.remove("fade-in");
                 document.getElementById("swipfirst").style.display = "inline-block";
             }, 2000); // Time for displaying the message
         }
     }
-
+    
     // Add event listener to the start button to begin the animation sequence
     document.getElementById("start-button").addEventListener("click", function() {
         setTimeout(function() {
@@ -70,6 +89,11 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementsByClassName("px__screen__frame")[0].style.backgroundImage = "url('src/img/gh.jpg')";
             let clickSound = document.getElementById('clickSound');
             clickSound.play();
+          
+
+   
+
+            
     
             showNextMessage();
         }, 2000);
@@ -79,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("swipfirst").addEventListener("touchstart", function() {
         document.getElementsByClassName("px__screen__frame")[0].style.backgroundImage = "url('src/img/iphonewall.jpg')";
         document.getElementById("swipfirst").style.display = "none";
-        document.getElementById("message5").style.display = "none";
+        document.getElementById("message6").style.display = "none";
 
         document.getElementById("input-container").style.display = "block";
     });

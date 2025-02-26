@@ -773,3 +773,16 @@ height: 90px;
   animation: slide 2s 2; /* Add infinite animation */
 }
 
+
+#volumeImage {
+  display: flex;
+  margin-left: 67vw;
+  margin-top: 10vh;
+  width: 12vw;
+  height: 14vh;
+
+  
+
+  
+}
+
