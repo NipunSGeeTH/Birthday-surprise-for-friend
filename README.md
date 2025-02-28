@@ -1,6 +1,11 @@
 # Happy Birthday Surprise Web Page 
-<p>This is a static web page created using HTML, CSS, and JavaScript.</p>
+<p>This is a static web page created using HTML, CSS, and JavaScript. This design use to Iphone 14 pro </p>
+
+ If you like to Dynamic Island , please try this link 
+<a href="https://github.com/NipunSGeeTH/Happy-Birthday-New-Iphone"> Iphone with Dynamic island </a> 
 <h3>iPhone & Fireworks</h3>
+
+
 <br/>
 
 <p align="center">
